@@ -1,4 +1,5 @@
 ﻿using MassTransit;
+using rabbitmq_masstransit_example.Contracts;
 using rabbitmq_masstransit_example.Properties;
 using System;
 using System.Collections.Generic;
@@ -8,11 +9,6 @@ using System.Threading.Tasks;
 
 namespace rabbitmq_masstransit_example
 {
-    public interface ValueEntered
-    {
-        string Value { get; set; }
-    }
-
     class Program
     {
         static void Main(string[] args)
@@ -29,9 +25,10 @@ namespace rabbitmq_masstransit_example
                 if ("quit".Equals(value, StringComparison.OrdinalIgnoreCase))
                     break;
 
-                busControl.Publish<ValueEntered>(new
+                busControl.Publish<PollResult>(new
                 {
-                    Value = value
+                    Count = 15,
+                    Name = value
                 });
 
             } while (true);

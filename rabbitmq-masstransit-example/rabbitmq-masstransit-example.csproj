@@ -76,5 +76,11 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\rabbitmq-masstransit-example.Contracts\rabbitmq-masstransit-example.Contracts.csproj">
+      <Project>{AE75C2E5-7617-49C7-ABB5-FF0713F2E973}</Project>
+      <Name>rabbitmq-masstransit-example.Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
