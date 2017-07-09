@@ -27,7 +27,7 @@ namespace rabbitmq_masstransit_example.Consumer
                     h.Password("guest");
                 });
 
-                cfg.ReceiveEndpoint(host, typeof(PollResult).Name, e => e.Consumer<PollResultConsumer>());
+                cfg.ReceiveEndpoint(host, typeof(PollResultSubmited).Name, e => e.Consumer<PollResultConsumer>());
             });
         }
     }

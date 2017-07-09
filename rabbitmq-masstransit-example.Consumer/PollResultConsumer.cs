@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace rabbitmq_masstransit_example.Consumer
 {
-    class PollResultConsumer : IConsumer<PollResult>
+    class PollResultConsumer : IConsumer<PollResultSubmited>
     {
-        public async Task Consume(ConsumeContext<PollResult> context)
+        public async Task Consume(ConsumeContext<PollResultSubmited> context)
         {
             await Console.Out.WriteLineAsync($"Updating poll result: {context.Message.Name}");
 

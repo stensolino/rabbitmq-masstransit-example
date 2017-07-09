@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace rabbitmq_masstransit_example.Contracts
 {
-    public interface PollResult
+    public interface PollResultSubmited
     {
         int Count { get; set; }
         string Name { get; set; }

@@ -25,7 +25,7 @@ namespace rabbitmq_masstransit_example
                 if ("quit".Equals(value, StringComparison.OrdinalIgnoreCase))
                     break;
 
-                busControl.Publish<PollResult>(new
+                busControl.Publish<PollResultSubmited>(new
                 {
                     Count = 15,
                     Name = value
